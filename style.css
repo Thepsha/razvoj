@@ -2,6 +2,10 @@
     font-family: ffinish;
     src: url(fFinish.ttf);
 }
+@font-face {
+    font-family: louis;
+    src: url(Louis\ George\ Cafe.ttf);
+}
 
 body {
     font-family: Arial, sans-serif;
@@ -57,48 +61,76 @@ nav ul li a {
 }
 
 header {
-    background-color: #BA181B; /* Promenite u željenu boju, na primer, red za crveno */
+    background-color: #BA181B;
     color: white;
     text-align: center;
     padding: 1em;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 50px;
 }
 h1{
     font-family: ffinish;
     color: black;
     
 }
-.parent {
-    color: white;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    }
-.div1 { 
 
-
-}
-.div2 { grid-area: 1 / 2 / 2 / 3; }
-.div3 { grid-area: 1 / 3 / 2 / 4; }
-.div4 { grid-area: 2 / 1 / 3 / 2; }
-.div5 { grid-area: 2 / 2 / 3 / 3; }
-.div6 { grid-area: 2 / 3 / 3 / 4; }
-.div7 { grid-area: 3 / 1 / 4 / 2; }
-.div8 { grid-area: 3 / 2 / 4 / 3; }
-.div9 { grid-area: 3 / 3 / 4 / 4; }
-.div10 { grid-area: 4 / 1 / 5 / 2; }
-.div11 { grid-area: 4 / 2 / 5 / 3; }
-.div12 { grid-area: 4 / 3 / 5 / 4; }
-
-#max{
-    max-width: 500px;
+#max {
+    max-width: 1000px;
     height: auto;
+    border-radius: 10px;
 }
+
+.image-container {
+    position: relative;
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+.image-text {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 20px; /* Dodajte padding po potrebi */
+    box-sizing: border-box; /* Uključuje padding u širinu i visinu elementa */
+    text-align: left;
+    color: white;
+    
+}
+
+.image-text h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-family: ffinish;
+}
+
+.image-text p {
+    font-size: 16px;
+    width: 900px;
+    font-family: louis;
+}
+
+/* Dodajte novu animacijsku klasu za tekst */
+.text-fade-in {
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+/* Dodajte stil za tekst druge slike */
+#first-image-container.is-visible .image-text {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 1s, transform 1s;
+}
+
+
+
+
+
+
+
 
 
 
